@@ -1,0 +1,5 @@
+GIPHY API KEY
+d6ed00ce3a7b4d4cb205f3d20fe6750c
+
+GIPHY URL SEARCH
+http://api.giphy.com/v1/gifs/search?api_key=d6ed00ce3a7b4d4cb205f3d20fe6750c&q=
