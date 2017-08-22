@@ -1,0 +1,46 @@
+/*copied from the other one just to start*/
+
+*{
+  box-sizing: border-box;
+  padding:30px;
+}
+
+body{
+  background: AliceBlue;
+  color: gray;
+}
+
+/*.container{
+  background: white;
+
+}
+
+#wrapper{
+  background: pink;
+}
+
+
+
+#buttons{
+  background: blue;
+
+}
+
+#trivia{
+  background: orange;
+  color: black;
+
+}
+
+#score{
+  background: MistyRose;
+  color: black;
+}*/
+
+
+footer{
+  text-align: center;
+  background: #DFCFBE;
+  color: white;
+
+}
