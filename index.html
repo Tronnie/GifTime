@@ -11,9 +11,12 @@
   <div class="row">
     <div class="col-lg-12">
         <div class="btns">
-            <button data-instrument="accordion">accordion</button>
-            <button data-instrument="cowbell">cowbell</button>
-            <button data-instrument="maracas">maracas</button>
+            <button         data-instrument="accordion">accordion
+            </button>
+            <button data-instrument="cowbell">cowbell
+            </button>
+            <button data-instrument="maracas">maracas
+            </button>
             <button data-instrument="tamborine">tamborine</button>
             <button data-instrument="sitar">sitar</button>
             <button data-instrument="xylophone">xylophone</button>
@@ -26,15 +29,29 @@
       </div>
     </div>
 
-    <div class="instruments">hi</div>
 
-    <div class = "search">
-        <div id="input">input area</div>
-        <button id="submit">SUBMIT</button>
+  <div class="row">
+
+    <div class="col-lg-12">
+          <div class="instruments">hi</div>
+    </div>
+    <div class="col-lg-4">
+          <!-- <div class = "search">
+            <div id="input">input area</div>
+            <button id="submit">SUBMIT</button>
+          </div> -->
+
+          <form id="input-form">
+              <label for="instrument-input">Type the name of an instrument you like</label>
+              <input type="text" id="instrument-input"><br>
+
+              <!-- Button triggers new movie to be added -->
+              <input id="add-instrument" type="submit" value="Submit">
+            </form>
+
     </div>
 
-
-    </div>
+  </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
