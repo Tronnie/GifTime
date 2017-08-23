@@ -53,7 +53,7 @@ console.log("hola! we are documents are connected")
     //xylophone
     //harp
     //saxophone
-    //slideguitar
+    //ukelele
     //theremin
     //gong
 
