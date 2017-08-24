@@ -52,11 +52,23 @@ console.log("hola! html and JS are connected")
 
             $(".instruments").prepend(instDiv);
 
+
+        //Test 6.  If/Else
+        
                 //Test 3. works! but only on first gif
             $(instDiv).on('click', function(){
               console.log ("tickle me image!");
               instDiv.html(animate);
             }); //<--click image
+
+
+
+            $(instDiv).on('click', function(){
+              console.log ("make it stop!");
+              instDiv.html(image);
+            });
+
+
 
 
 
