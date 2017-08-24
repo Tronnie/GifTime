@@ -55,7 +55,7 @@ console.log("hola! html and JS are connected")
                 //Test 3.
             $(instDiv).on('click', function(){
               console.log ("tickle me image!");
-              instDiv.append(animate);
+              instDiv.html(animate);
 
 
                   //Test 5. boolean image
