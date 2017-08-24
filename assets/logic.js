@@ -1,17 +1,5 @@
 console.log("hola! html and JS are connected")
 
-
-
-
-
-//GLOBAL VARIABLES
-// var instrument = ("");
-// var queryURL =  "https://api.giphy.com/v1/gifs/search?api_key=d6ed00ce3a7b4d4cb205f3d20fe6750c&limit=10&q=" + instrument;
-
-//FUNCTIONS
-  //various instruments
-
-
     //-accordion
     $("button").on('click', function(){
             console.log('the accordion is on!')
@@ -20,14 +8,11 @@ console.log("hola! html and JS are connected")
       // var state =$(this).attr("data-state")
       var queryURL =  "https://api.giphy.com/v1/gifs/search?api_key=d6ed00ce3a7b4d4cb205f3d20fe6750c&limit=10&q=" + inst;
 
-
       $.ajax ({
               url:queryURL,
               method: "GET"})//<--ajax
 
        .done(function (response) {
-            console.log(queryURL);
-            console.log(response);
             console.log(response.data);
 
           var results = response.data;
@@ -35,7 +20,10 @@ console.log("hola! html and JS are connected")
             var instDiv = $("<div>");
             var p = $("<p>").text("Rating: " + results[i].rating);
 
-            //Test 3. works! but only on first gif
+
+            //Test 7. add a movingImage loop in order to animate all gifs!
+    function animateImage(){
+        //Test 3. works! but only on first gif
         $(instDiv).on('click', function(){
           console.log ("tickle me image!");
           instDiv.html(animate);
@@ -48,77 +36,19 @@ console.log("hola! html and JS are connected")
             var animate =$("<img>")
             animate.attr("src", results[i].images.fixed_height.url);
 
-//if results[i]= "_still.url"{
-//image.attr("src", results[i].images.fixed_height.url);
-//} ?????
             instDiv.append(p);
             instDiv.append(image);
             // instDiv.append(animate);
-
-
             $(".instruments").prepend(instDiv);
-
-
-        //Test 6.  If/Else
-
-
-
-//<--for
-
-            // $(instDiv).on('click', function(){
-            //   console.log ("make it stop!");
-            //   instDiv.html(image);
-            // });
+    } //<--animateImage function
+    animateImage ()  //<--Test 7.
 
 
 
+        }//<--for loop
 
 
-                            //Test 5. boolean image
-                      //   if (image === image)
-                      //     image.attr(animate);
-
-
-                //Test 2.
-              // var animate = $("<img>");
-              // image.attr("src", results[i].images.fixed_height.url);
-            // }) //<--image click
-          // });
-
-
-          }//<--for loop
-
-
-              ///try to add an instrument
-          // $("#add-instrument").on("click", function(event){
-          //   console.log ("submit clicked");
-          //   event.preventDefault();
-          //   var newInst = $("#instrument-input").val().trim();
-          //   results.push(newInst);
-          //
-            // renderButtons();
-
-          // })//<--input form
 
        }); //<--.done
 
     }); //<--button onclick
-
-
-
-
-    // $("#search").on('click', function(){
-    //   console.log('the click is on!')
-    // });
-    //-cowbell
-    //-maracas
-    //-tamborine
-    //-sitar
-    //xylophone
-    //harp
-    //saxophone
-    //ukelele
-    //theremin
-    //gong
-
-//MAIN PROCESS
