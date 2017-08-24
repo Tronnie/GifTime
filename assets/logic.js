@@ -16,14 +16,15 @@ console.log("hola! html and JS are connected")
     $("button").on('click', function(){
             console.log('the accordion is on!')
 
-      var animal = $(this).attr("data-instrument");
+      var inst = $(this).attr("data-instrument");
       // var state =$(this).attr("data-state")
-      var queryURL =  "https://api.giphy.com/v1/gifs/search?api_key=d6ed00ce3a7b4d4cb205f3d20fe6750c&limit=10&q=" + animal;
+      var queryURL =  "https://api.giphy.com/v1/gifs/search?api_key=d6ed00ce3a7b4d4cb205f3d20fe6750c&limit=10&q=" + inst;
 
 
       $.ajax ({
               url:queryURL,
               method: "GET"})//<--ajax
+
        .done(function (response) {
             console.log(queryURL);
             console.log(response);
@@ -31,31 +32,54 @@ console.log("hola! html and JS are connected")
 
           var results = response.data;
           for (var i=0; i<results.length; i++){
-            var animalDiv = $("<div>");
+            var instDiv = $("<div>");
             var p = $("<p>").text("Rating: " + results[i].rating);
+
+                //Original
             var image = $("<img>");
             image.attr("src", results[i].images.fixed_height_still.url);
+            //
+            // var animate =$("<img>")
+            // animate.attr("src", results[i].images.fixed_height.url);
 
-            animalDiv.append(p);
-            animalDiv.append(image);
+//if results[i]= "_still.url"{
+//image.attr("src", results[i].images.fixed_height.url);
+//} ?????
+            instDiv.append(p);
+            instDiv.append(image);
+            // instDiv.append(animate);
 
-            $(".instruments").prepend(animalDiv);
 
+            $(".instruments").prepend(instDiv);
+
+                //Test 3.
             $(image).on('click', function(){
-              console.log ("image clicked");
-              var animate = $("<img>");
-              image.attr("src", results[i].images.fixed_height.url);
-            })
+              console.log ("tickle me image!");
+            //   if (image === image)
+            //     image.attr(animate);
+              });
+
+
+                //Test 2.
+              // var animate = $("<img>");
+              // image.attr("src", results[i].images.fixed_height.url);
+            // }) //<--image click
+          // });
+
 
           }//<--for loop
 
-          $("#add-instrument").on("click", function(event){
-            console.log ("submit clicked");
-            event.preventDefault();
-            var newInst = $("#instrument-input").val().trim();
-            results.push(newInst);
 
-          })//<--input form
+              ///try to add an instrument
+          // $("#add-instrument").on("click", function(event){
+          //   console.log ("submit clicked");
+          //   event.preventDefault();
+          //   var newInst = $("#instrument-input").val().trim();
+          //   results.push(newInst);
+          //
+            // renderButtons();
+
+          // })//<--input form
 
        }); //<--.done
 
