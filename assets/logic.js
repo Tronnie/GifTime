@@ -35,6 +35,12 @@ console.log("hola! html and JS are connected")
             var instDiv = $("<div>");
             var p = $("<p>").text("Rating: " + results[i].rating);
 
+            //Test 3. works! but only on first gif
+        $(instDiv).on('click', function(){
+          console.log ("tickle me image!");
+          instDiv.html(animate);
+        }); //<--click image
+
                 //Original
             var image = $("<img>");
             image.attr("src", results[i].images.fixed_height_still.url);
@@ -54,19 +60,15 @@ console.log("hola! html and JS are connected")
 
 
         //Test 6.  If/Else
-        
-                //Test 3. works! but only on first gif
-            $(instDiv).on('click', function(){
-              console.log ("tickle me image!");
-              instDiv.html(animate);
-            }); //<--click image
 
 
 
-            $(instDiv).on('click', function(){
-              console.log ("make it stop!");
-              instDiv.html(image);
-            });
+//<--for
+
+            // $(instDiv).on('click', function(){
+            //   console.log ("make it stop!");
+            //   instDiv.html(image);
+            // });
 
 
 
