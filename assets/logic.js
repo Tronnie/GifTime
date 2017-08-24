@@ -52,16 +52,17 @@ console.log("hola! html and JS are connected")
 
             $(".instruments").prepend(instDiv);
 
-                //Test 3.
+                //Test 3. works! but only on first gif
             $(instDiv).on('click', function(){
               console.log ("tickle me image!");
               instDiv.html(animate);
+            }); //<--click image
 
 
-                  //Test 5. boolean image
-            //   if (image === image)
-            //     image.attr(animate);
-          }); //<--click image
+
+                            //Test 5. boolean image
+                      //   if (image === image)
+                      //     image.attr(animate);
 
 
                 //Test 2.
