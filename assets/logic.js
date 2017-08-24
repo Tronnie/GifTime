@@ -39,8 +39,8 @@ console.log("hola! html and JS are connected")
             var image = $("<img>");
             image.attr("src", results[i].images.fixed_height_still.url);
             //
-            // var animate =$("<img>")
-            // animate.attr("src", results[i].images.fixed_height.url);
+            var animate =$("<img>")
+            animate.attr("src", results[i].images.fixed_height.url);
 
 //if results[i]= "_still.url"{
 //image.attr("src", results[i].images.fixed_height.url);
@@ -53,11 +53,15 @@ console.log("hola! html and JS are connected")
             $(".instruments").prepend(instDiv);
 
                 //Test 3.
-            $(image).on('click', function(){
+            $(instDiv).on('click', function(){
               console.log ("tickle me image!");
+              instDiv.append(animate);
+
+
+                  //Test 5. boolean image
             //   if (image === image)
             //     image.attr(animate);
-              });
+          }); //<--click image
 
 
                 //Test 2.
